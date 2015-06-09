@@ -1,0 +1,8 @@
+#################
+## VS
+#################
+
+KanbanBoard/bin/
+KanbanBoard/obj/
+packages/
+
