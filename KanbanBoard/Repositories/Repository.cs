@@ -11,11 +11,13 @@ namespace KanbanBoard
     public class Repository
     {
         protected Database db;
-        private const string BDD_NAME = "Postgres";
+        private const string PROVIDER_NAME = "Npgsql";
+        private const string CS_ENV = "CS";
 
         public Repository()
         {
-            db = new PetaPoco.Database(BDD_NAME);
+            string cs = Environment.GetEnvironmentVariable(CS_ENV);
+            db = new PetaPoco.Database(cs, PROVIDER_NAME);
         }
     }
 }
